@@ -2551,6 +2551,7 @@ MonoBehaviour:
   rotation: -30
   target: {fileID: 782789064}
   anim: {fileID: 794911763}
+  _controller: {fileID: 0}
   walkingspeed: 15
   CanDoubleJump: 0
   Jumpcount: 1
@@ -2559,6 +2560,7 @@ MonoBehaviour:
   _rotationSpeed: 10
   wallrunrotationSpeed: 20
   _followCamera: {fileID: 281323232}
+  _playerVelocity: {x: 0, y: 0, z: 0}
   _groundedPlayer: 0
   _jumpHeight: 1
   _gravityValue: -40
@@ -4402,7 +4404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745419963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4511,10 +4513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c9693432f01a846a9945a0da243901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cam: {fileID: 1745419962}
-  offsetX: 345
-  offsetY: 175
-  second: 0
+  sigth: {fileID: 1745419962}
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1869121293
 GameObject:
   m_ObjectHideFlags: 0

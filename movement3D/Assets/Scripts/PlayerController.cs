@@ -17,30 +17,22 @@ public class PlayerController : MonoBehaviour
     [Header("GameObjects")]
 
     public Animator anim;
-    private CharacterController _controller;
+    [SerializeField] CharacterController _controller;
     public float walkingspeed;
 
     [Header("player")]
 
     public bool CanDoubleJump;
     public int Jumpcount;
-    [SerializeField]
-    private float _playerSpeed;
-    [SerializeField]
-    private float _playerSprint;
-    [SerializeField]
-    private float _rotationSpeed;
-    [SerializeField]
-    private float wallrunrotationSpeed;
-    [SerializeField]
-    private Camera _followCamera;
-    private Vector3 _playerVelocity;
+    [SerializeField] float _playerSpeed;
+    [SerializeField] float _playerSprint;
+    [SerializeField] float _rotationSpeed;
+    [SerializeField] float wallrunrotationSpeed;
+    [SerializeField] Camera _followCamera;
+    [SerializeField] Vector3 _playerVelocity;
     public bool _groundedPlayer;
-    [SerializeField]
-    private float _jumpHeight = 1.0f;
-    [SerializeField]
+    [SerializeField] float _jumpHeight = 1.0f;
     public float _gravityValue = -9.81f;
-    [SerializeField]
     public bool playerIsAiming;
 
     private void Start()
@@ -108,9 +100,9 @@ public class PlayerController : MonoBehaviour
         Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
         Vector3 movementDirection = movementInput.normalized;
 
-       if (playerIsAiming)
-       {
-           // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
+        if (playerIsAiming)
+        {
+            // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation, _rotationSpeed * Time.deltaTime);
         }
 
