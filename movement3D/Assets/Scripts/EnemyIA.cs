@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyIA: MonoBehaviour
 {
+    public SpawnManager spawnManager;
     public NavMeshAgent agent;
 
     public Transform player1;
@@ -32,8 +33,7 @@ public class EnemyIA: MonoBehaviour
     }
       void Start()
     {
-        
-       
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();;
     }
 
     private void Update()
@@ -108,6 +108,7 @@ public class EnemyIA: MonoBehaviour
     }
     private void DestroyEnemy()
     {
+        spawnManager.Deathcount += 1;
         Destroy(gameObject);
     }
 
