@@ -727,10 +727,11 @@ MonoBehaviour:
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
+  FireStart: {fileID: 0}
   timeBetweenAttacks: 0
   projectile: {fileID: 0}
-  sightRange: 15.2
-  attackRange: 10.8
+  sightRange: 25.8
+  attackRange: 20.25
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &1812113794599704570

@@ -18,6 +18,7 @@ public class EnemyIA: MonoBehaviour
     public float walkPointRange;
 
     [Header("Attacking")]
+    public Transform FireStart;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
@@ -121,6 +122,6 @@ public class EnemyIA: MonoBehaviour
     }
             public void Shoot()
     {
-        //Instantiate(Shell, FireStart.position, nCanon.rotation);
+        Instantiate(projectile,FireStart.position, FireStart.rotation);
     }
 }

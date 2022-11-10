@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float Health = 100 ;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [Range(0.0f, 100.0f)]
+    public float Health;
+    public GameManager Manager;
     void Update()
     {
-        
+        if (Health<=0)
+        {
+            Manager.GameOver();
+        }
     }
 }

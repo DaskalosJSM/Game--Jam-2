@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public Rigidbody rb;
     public EnemyIA enemyLife;
+    public PlayerStats health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,11 @@ public class Bullet : MonoBehaviour
 
             Destroy(this.gameObject);
         }
+         if (other.gameObject.CompareTag("Player"))
+         {
+            health =  other.gameObject.GetComponent<PlayerStats>();
+            health.Health -= 25;
+         }
         //rb.velocity = speed * -(transform.forward);
         Destroy(this.gameObject);
     }

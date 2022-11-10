@@ -465,7 +465,6 @@ GameObject:
   - component: {fileID: 8915353017779608082}
   - component: {fileID: 1065889986578042767}
   - component: {fileID: 1065889986578042760}
-  - component: {fileID: 295828143794426965}
   m_Layer: 0
   m_Name: Boximon Fiery 2
   m_TagString: Enemy
@@ -498,6 +497,7 @@ Transform:
   - {fileID: 1064376257157078173}
   - {fileID: 1064060822075281193}
   - {fileID: 1070462753506197831}
+  - {fileID: 2715754350212728656}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -545,10 +545,11 @@ MonoBehaviour:
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
+  FireStart: {fileID: 2715754350212728656}
+  timeBetweenAttacks: 3
+  projectile: {fileID: 6773207641499653898, guid: 6d8452fd72db4f64a92a59fceb82a687, type: 3}
   sightRange: 27.92
-  attackRange: 6.79
+  attackRange: 9
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &1065889986578042767
@@ -562,8 +563,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.019705, y: 1.0189698, z: 1}
-  m_Center: {x: -0.012537925, y: 0.5060635, z: 0}
+  m_Size: {x: 1.019705, y: 1.0189698, z: 0.81680304}
+  m_Center: {x: -0.012537925, y: 0.5060635, z: -0.091598466}
 --- !u!195 &1065889986578042760
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -586,19 +587,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!135 &295828143794426965
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066729852609062007}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.42328548
-  m_Center: {x: 0, y: 0.51073766, z: 0.5251147}
 --- !u!1 &1066747586977787761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,4 +1251,35 @@ Transform:
   - {fileID: 1070429012562992095}
   m_Father: {fileID: 1070587713549921999}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7759942625996239174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2715754350212728656}
+  m_Layer: 0
+  m_Name: FireStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2715754350212728656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759942625996239174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.502, z: 0.584}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1070193783847730099}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
