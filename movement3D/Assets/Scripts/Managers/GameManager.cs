@@ -107,13 +107,13 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Invoke("LoadTrigger", TransitionTime);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         SetGameState(GameState.gameOver);
     }
     public void YouWin()
     {
         Invoke("LoadTrigger", TransitionTime);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         SetGameState(GameState.YouWin);
     }
     public void ExitGame()
