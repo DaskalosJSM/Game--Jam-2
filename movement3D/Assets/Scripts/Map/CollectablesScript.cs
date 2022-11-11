@@ -23,7 +23,7 @@ public class CollectablesScript : MonoBehaviour
             Stats.weaponPiece += 1;
             Key = false;
         }
-        if (other.gameObject.CompareTag("Player") && Life == true)
+        if (other.gameObject.CompareTag("Player") && Life == true && Stats.Health<100)
         {
             Destroy(gameObject);
             Stats.Health += 25;

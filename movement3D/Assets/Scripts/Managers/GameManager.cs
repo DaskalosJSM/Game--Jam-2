@@ -16,7 +16,8 @@ public enum GameState
     FianlBoss,
     gameOver,
     Credits,
-    Controls
+    Controls,
+    YouWin
 }
 
 public class GameManager : MonoBehaviour
@@ -94,6 +95,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         SetGameState(GameState.gameOver);
     }
+    public void YouWin()
+    {
+        Time.timeScale = 0f;
+        SetGameState(GameState.YouWin);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
     public void SetGameState(GameState newGameState)
     {
@@ -106,12 +116,12 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.History)
         {
-             //TODO: colocar la logica del historia
+            //TODO: colocar la logica del historia
             SceneManager.LoadScene("History");
         }
         else if (newGameState == GameState.Level1)
         {
-             //TODO: colocar la logica del level 1
+            //TODO: colocar la logica del level 1
             SceneManager.LoadScene("GameLevel1");
         }
         else if (newGameState == GameState.Level2)
@@ -134,12 +144,12 @@ public class GameManager : MonoBehaviour
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Tutorial");
         }
-              else if (newGameState == GameState.Credits)
+        else if (newGameState == GameState.Credits)
         {
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Credits");
         }
-              else if (newGameState == GameState.Controls)
+        else if (newGameState == GameState.Controls)
         {
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Controls");
@@ -148,6 +158,11 @@ public class GameManager : MonoBehaviour
         {
             //TODO: colocar la logica del gameOver
             SceneManager.LoadScene("GameOver");
+        }
+        else if (newGameState == GameState.YouWin)
+        {
+            //TODO: colocar la logica del gameOver
+            SceneManager.LoadScene("YouWin");
         }
     }
 }
