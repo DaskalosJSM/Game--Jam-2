@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
         }
          if (other.gameObject.CompareTag("Player"))
          {
-            health =  other.gameObject.GetComponent<PlayerStats>();
+            health = GameObject.Find("GameStatsManager").GetComponent<PlayerStats>();
             health.Health -= 25;
          }
         //rb.velocity = speed * -(transform.forward);

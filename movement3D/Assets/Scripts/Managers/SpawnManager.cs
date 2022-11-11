@@ -7,6 +7,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject Vault;
     public GameObject Reward;
     public GameObject[] Spawners;
+    public GameObject levelPortal;
+
     public float Deathcount;
     [SerializeField] int Index;
     [SerializeField] float DeathLimits;
@@ -32,6 +34,7 @@ public class SpawnManager : MonoBehaviour
             DesactivateSpawner();
             Deathcount = 0;
             TaskComplete = true;
+            levelPortal.SetActive(true);
         }
     }
     void DesactivateSpawner()

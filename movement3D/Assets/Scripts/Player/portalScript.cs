@@ -12,7 +12,7 @@ public class portalScript : MonoBehaviour
     private void Start()
     {
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        Stats = GameObject.Find("Player").GetComponent<PlayerStats>();
+        Stats = GameObject.Find("GameStatsManager").GetComponent<PlayerStats>();
     }
     private void OnTriggerEnter(Collider other)
     {
