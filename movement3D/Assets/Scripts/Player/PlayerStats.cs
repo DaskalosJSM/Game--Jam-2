@@ -8,6 +8,9 @@ public class PlayerStats : MonoBehaviour
 
     [Range(0.0f, 100.0f)]
     public float Health;
+
+    [Range(0, 30)]
+    public int Anmo;
     public int weaponPiece;
     public GameManager Manager;
     private void Awake()
@@ -32,6 +35,9 @@ public class PlayerStats : MonoBehaviour
         {
             Manager.GameOver();
             Health = 100;
+            weaponPiece = 0;
+            Anmo = 10;
+
         }
     }
 }

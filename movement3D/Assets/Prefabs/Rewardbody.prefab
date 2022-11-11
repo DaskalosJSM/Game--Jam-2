@@ -162,6 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats: {fileID: 0}
+  Life: 0
+  Anmo: 0
+  Key: 1
 --- !u!1 &6316552552807494344
 GameObject:
   m_ObjectHideFlags: 0
