@@ -134,3 +134,4 @@ MonoBehaviour:
   rb: {fileID: 6900332115156298167}
   enemyLife: {fileID: 0}
   health: {fileID: 0}
+  soundArrow: {fileID: 0}
