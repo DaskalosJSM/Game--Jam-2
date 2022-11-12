@@ -1656,13 +1656,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   anim: {fileID: 0}
-  health: 100
+  health: 50
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   FireStart: {fileID: 638235536683183546}
   timeBetweenAttacks: 1.5
   projectile: {fileID: 6773207641499653898, guid: 0f2ac5196d6d7dc4d8712918477243e8, type: 3}
-  sightRange: 36
+  sightRange: 27.14
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0

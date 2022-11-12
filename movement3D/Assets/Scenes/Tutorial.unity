@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anmo: 3
-  timeToReload: 0.2
+  timeToReload: 1
   Shell: {fileID: 6900332115156298167, guid: 38764e3547020104b8f10428bf8de1a3, type: 3}
   FireStart: {fileID: 1434121248}
   anim: {fileID: 794911763}
