@@ -36,11 +36,8 @@ public class GameManager : MonoBehaviour
         if (sharedInstance == null)
         {
             sharedInstance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-    }
-    private void Start()
-    {
-        anim = GameObject.Find("Crossfade").GetComponent<Animator>();
     }
     // Función encargado de iniciar la scena menú principal
     public void PrincipalMenu()
@@ -184,6 +181,7 @@ public class GameManager : MonoBehaviour
     }
     void LoadTrigger()
     {
+        anim = GameObject.Find("Crossfade").GetComponent<Animator>();
         anim.SetTrigger("Start");
     }
 }
