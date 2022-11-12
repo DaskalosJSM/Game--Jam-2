@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 4
   lifeTime: 4
 --- !u!4 &90375142
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 4
   lifeTime: 4
 --- !u!4 &95065093
@@ -2372,6 +2372,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  anim: {fileID: 0}
   health: 1500
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
@@ -2634,6 +2635,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  anim: {fileID: 0}
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
@@ -3911,7 +3913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 4
   lifeTime: 4
 --- !u!4 &1137606033
@@ -6255,7 +6257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 4
   lifeTime: 4
 --- !u!4 &1797058961

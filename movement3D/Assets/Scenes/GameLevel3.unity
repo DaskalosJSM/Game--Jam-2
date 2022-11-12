@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &67437667
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &112447063
@@ -2271,7 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &262328621
@@ -8165,7 +8165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &1348582591
@@ -8983,7 +8983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &1460910246
@@ -11282,7 +11282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &1915288695
@@ -11616,7 +11616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &1989838531
@@ -11807,7 +11807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 1066729852609062007, guid: 542cf1d578ca5854a852f79c31198acc, type: 3}
+  - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 2
   lifeTime: 8
 --- !u!4 &2035930061
@@ -12179,6 +12179,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  anim: {fileID: 0}
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0

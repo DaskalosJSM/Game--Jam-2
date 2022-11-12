@@ -1662,7 +1662,7 @@ MonoBehaviour:
   FireStart: {fileID: 638235536683183546}
   timeBetweenAttacks: 1.5
   projectile: {fileID: 6773207641499653898, guid: 0f2ac5196d6d7dc4d8712918477243e8, type: 3}
-  sightRange: 22
+  sightRange: 36
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
