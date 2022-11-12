@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyIA: MonoBehaviour
+public class EnemyIA : MonoBehaviour
 {
     public SpawnManager spawnManager;
     public NavMeshAgent agent;
@@ -34,9 +34,9 @@ public class EnemyIA: MonoBehaviour
         player1 = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
-      void Start()
+    void Start()
     {
-        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();;
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>(); ;
     }
 
     private void Update()
@@ -109,11 +109,14 @@ public class EnemyIA: MonoBehaviour
         anim.SetTrigger("DamageHit");
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 1f);
+        if (health <= 0)
+        {
+            anim.SetTrigger("Death");
+            Invoke(nameof(DestroyEnemy), 1.5f);
+        }
     }
     private void DestroyEnemy()
     {
-        anim.SetTrigger("Death");
         spawnManager.Deathcount += 1;
         Destroy(gameObject);
     }
@@ -125,8 +128,8 @@ public class EnemyIA: MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
-            public void Shoot()
+    public void Shoot()
     {
-        Instantiate(projectile,FireStart.position, FireStart.rotation);
+        Instantiate(projectile, FireStart.position, FireStart.rotation);
     }
 }
