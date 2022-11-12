@@ -16,13 +16,16 @@ public enum GameState
     FianlBoss,
     gameOver,
     Credits,
-    Controls
+    Controls,
+    YouWin
 }
 
 public class GameManager : MonoBehaviour
 {
     // Inicializo el singleton en el primer script 
     public static GameManager sharedInstance;
+    public Animator anim;
+    public float TransitionTime;
 
     // Declaración del estado del juego
     public GameState currentGameState = GameState.principalMenu;
@@ -35,64 +38,88 @@ public class GameManager : MonoBehaviour
             sharedInstance = this;
         }
     }
-
+    private void Start()
+    {
+        anim = GameObject.Find("Crossfade").GetComponent<Animator>();
+    }
     // Función encargado de iniciar la scena menú principal
     public void PrincipalMenu()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.principalMenu);
     }
     // Función encargado de iniciar la scena historia
     public void History()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.History);
     }
     // Función encargado de iniciar la scena level1
     public void Tutorial()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Tutorial);
     }
     // Función encargado de iniciar la scena level2
     public void Level1()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Level1);
     }
     // Función encargado de iniciar la scena level3
     public void Level2()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Level2);
     }
     // Función encargado de iniciar la scena level4
     public void Level3()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Level3);
     }
     // Función encargado de iniciar la scena level5
     public void FinalBoss()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.FianlBoss);
     }
     public void Credits()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Credits);
     }
     public void Controls()
     {
+        Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Controls);
     }
     // Función encargado de iniciar la scena de final de juego
     public void GameOver()
     {
-        Time.timeScale = 0f;
+        Invoke("LoadTrigger", TransitionTime);
+        Time.timeScale = 1f;
         SetGameState(GameState.gameOver);
+    }
+    public void YouWin()
+    {
+        Invoke("LoadTrigger", TransitionTime);
+        Time.timeScale = 1f;
+        SetGameState(GameState.YouWin);
+    }
+    public void ExitGame()
+    {
+        Invoke("LoadTrigger", TransitionTime);
+        Application.Quit();
     }
 
     public void SetGameState(GameState newGameState)
@@ -106,12 +133,12 @@ public class GameManager : MonoBehaviour
         }
         else if (newGameState == GameState.History)
         {
-             //TODO: colocar la logica del historia
+            //TODO: colocar la logica del historia
             SceneManager.LoadScene("History");
         }
         else if (newGameState == GameState.Level1)
         {
-             //TODO: colocar la logica del level 1
+            //TODO: colocar la logica del level 1
             SceneManager.LoadScene("GameLevel1");
         }
         else if (newGameState == GameState.Level2)
@@ -134,12 +161,12 @@ public class GameManager : MonoBehaviour
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Tutorial");
         }
-              else if (newGameState == GameState.Credits)
+        else if (newGameState == GameState.Credits)
         {
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Credits");
         }
-              else if (newGameState == GameState.Controls)
+        else if (newGameState == GameState.Controls)
         {
             //TODO: colocar la logica del level 5
             SceneManager.LoadScene("Controls");
@@ -149,5 +176,14 @@ public class GameManager : MonoBehaviour
             //TODO: colocar la logica del gameOver
             SceneManager.LoadScene("GameOver");
         }
+        else if (newGameState == GameState.YouWin)
+        {
+            //TODO: colocar la logica del gameOver
+            SceneManager.LoadScene("YouWin");
+        }
+    }
+    void LoadTrigger()
+    {
+        anim.SetTrigger("Start");
     }
 }
