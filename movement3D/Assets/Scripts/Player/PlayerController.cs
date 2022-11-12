@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Wallrun", false);
             anim.SetBool("Grounded", true);
         }
-        if (Input.GetKey(KeyCode.E)) Run();
+        if (Input.GetKey(KeyCode.Q)) Run();
         if (Input.GetKeyDown("space") && Jumpcount < 2 && CanDoubleJump) DoubleJump();
         if (Input.GetButton("Jump") && _groundedPlayer) Jump();
 

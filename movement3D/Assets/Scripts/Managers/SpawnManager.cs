@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public GameObject UIHint;
+    public GameObject cover;
     public GameObject Vault;
     public GameObject Reward;
     public GameObject[] Spawners;
@@ -27,9 +29,11 @@ public class SpawnManager : MonoBehaviour
         {
             ActivateSpawner();
             ActivationInterval = ActivationMemory;
+            UIHint.SetActive(false);
         }
-        if (Deathcount >= DeathLimits)
+        if (Deathcount == DeathLimits)
         {
+            UIHint.SetActive(true);
             spawnersActive = false;
             DesactivateSpawner();
             Deathcount = 0;
@@ -49,6 +53,10 @@ public class SpawnManager : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            cover.SetActive(false);
+        }
 
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && TaskComplete == false)
         {
@@ -57,7 +65,16 @@ public class SpawnManager : MonoBehaviour
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && TaskComplete == true)
         {
             Destroy(Vault);
+            UIHint.SetActive(false);
             Instantiate(Reward,this.transform.position,this.transform.rotation);
+        }
+    }
+      private void OnTriggerExit(Collider other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            cover.SetActive(true);
         }
     }
 }
