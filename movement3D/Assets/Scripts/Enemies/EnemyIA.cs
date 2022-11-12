@@ -9,6 +9,7 @@ public class EnemyIA: MonoBehaviour
     public Transform player1;
 
     public LayerMask whatIsGround, whatIsPlayer;
+    public Animator anim;
 
     public float health;
 
@@ -29,6 +30,7 @@ public class EnemyIA: MonoBehaviour
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         player1 = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -88,6 +90,7 @@ public class EnemyIA: MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            anim.SetTrigger("Attack");
             ///Attack code here
             Invoke("Shoot", 0.3f);
             ///End of attack code
@@ -103,12 +106,14 @@ public class EnemyIA: MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        anim.SetTrigger("DamageHit");
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 1f);
     }
     private void DestroyEnemy()
     {
+        anim.SetTrigger("Death");
         spawnManager.Deathcount += 1;
         Destroy(gameObject);
     }
