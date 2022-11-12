@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +11,8 @@ public class MovementDoors : MonoBehaviour
 
         if(collider.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
+            Debug.Log("prueba rama");
         }
     }
 
