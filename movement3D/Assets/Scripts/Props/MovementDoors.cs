@@ -9,7 +9,8 @@ public class MovementDoors : MonoBehaviour
     public List<Transform> waypoints;
     public float moveSpeed;
     private int target;
-    public bool canBeOpen;
+    public bool Opening;
+     public bool cantBeOpen;
 
     private void Start()
     {
@@ -17,7 +18,11 @@ public class MovementDoors : MonoBehaviour
     }
     private void Update()
     {
-        if (canBeOpen == true)
+        if (cantBeOpen == true)
+        {
+            transform.position = transform.position;
+        }
+        if (Opening == true)
         {
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[target].position, moveSpeed * Time.deltaTime);
@@ -44,9 +49,9 @@ public class MovementDoors : MonoBehaviour
         {
             cover.SetActive(false);
         }
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && cantBeOpen == false)
         {
-            canBeOpen = true;
+            Opening = true;
         }
     }
     private void OnTriggerExit(Collider other)
