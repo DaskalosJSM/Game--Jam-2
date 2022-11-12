@@ -11,7 +11,6 @@ public class MovementDoors : MonoBehaviour
         if(collider.CompareTag("Player"))
         {
             Destroy(gameObject); 
-            Debug.Log("prueba rama");
         }
     }
 
