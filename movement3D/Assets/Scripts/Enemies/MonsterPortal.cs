@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class MonsterPortal : MonoBehaviour
 {
+    public SpawnManager Spawner;
     public GameManager Manager;
 
-    private void OnTriggerExit(Collider other) 
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player")){
-            Manager.SetGameState(GameState.Level1);
+        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Invoke("Transport", 2.0f);
         }
+
+    }
+    void Transport()
+    {
+        Manager.SetGameState(GameState.Level1);
+
     }
 }

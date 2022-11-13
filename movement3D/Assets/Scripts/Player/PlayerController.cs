@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Movement", false);
         anim.SetBool("Run", false);
         anim.SetBool("IsAiming", false);
-        anim.SetBool("Dublejump", false);
+        //anim.SetBool("Dublejump", false);
         anim.SetBool("Wallrun", false);
 
 
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     }
     void DoubleJump()
     {
-        anim.SetBool("Dublejump", true);
+        // anim.SetBool("Dublejump", true);
         _playerVelocity.y = 0f;
         _playerVelocity.y += Mathf.Sqrt(_jumpHeight * 2 * -3.0f * _gravityValue);
         Jumpcount++;
@@ -96,55 +96,60 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if (playerIsAiming == false)
+        {
+            if (_groundedPlayer && _playerVelocity.y < 0)
+            {
+                _playerVelocity.y = 0f;
+            }
+            Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
+            Vector3 movementDirection = movementInput.normalized;
+            _controller.Move(movementDirection * _playerSpeed * Time.deltaTime);
 
-        Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
-        Vector3 movementDirection = movementInput.normalized;
-
-        if (playerIsAiming)
+            _playerVelocity.y += _gravityValue * Time.deltaTime;
+            _controller.Move(_playerVelocity * Time.deltaTime);
+            if (movementDirection != Vector3.zero)
+            {
+                anim.SetBool("Movement", true);
+                Quaternion desiredRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, _rotationSpeed * Time.deltaTime);
+                if (wallrunning == true)
+                {
+                    anim.SetBool("Wallrun", true);
+                    //anim.SetBool("Dublejump", false);
+                    if (wallrun.wallLeft)
+                    {
+                        Jumpcount = 0;
+                        wallrunningCap--;
+                        desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
+                    }
+                    if (wallrun.wallRight)
+                    {
+                        Jumpcount = 0;
+                        Debug.Log(rotation);
+                        if (rotation < 0) rotation = -rotation;
+                        wallrunningCap--;
+                        desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
+                    }
+                }
+            }
+        }
+        if (playerIsAiming == true)
         {
             // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation, _rotationSpeed * Time.deltaTime);
-        }
+            transform.rotation = Quaternion.Slerp(transform.rotation, _followCamera.transform.rotation, _rotationSpeed * Time.deltaTime);
+            Vector3 movementDirection = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
+            _controller.Move(movementDirection * _playerSpeed * Time.deltaTime);
 
-        if (_groundedPlayer && _playerVelocity.y < 0)
-        {
-            _playerVelocity.y = 0f;
-        }
-
-        if (movementDirection != Vector3.zero)
-        {
-            anim.SetBool("Movement", true);
-            Quaternion desiredRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, _rotationSpeed * Time.deltaTime);
-            if (wallrunning == true)
+            if (movementDirection != Vector3.zero)
             {
-                anim.SetBool("Wallrun", true);
-                anim.SetBool("Dublejump", false);
-                if (wallrun.wallLeft)
-                {
-                    Jumpcount = 0;
-                    wallrunningCap--;
-                    desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
-                }
-                if (wallrun.wallRight)
-                {
-                    Jumpcount = 0;
-                    Debug.Log(rotation);
-                    if (rotation < 0) rotation = -rotation;
-                    wallrunningCap--;
-                    desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
-                }
-
+                anim.SetBool("Movement", true);
             }
-
-
+            _playerVelocity.y += _gravityValue * Time.deltaTime;
+            _controller.Move(_playerVelocity * Time.deltaTime);
         }
-        _controller.Move(movementDirection * _playerSpeed * Time.deltaTime);
-
-        _playerVelocity.y += _gravityValue * Time.deltaTime;
-        _controller.Move(_playerVelocity * Time.deltaTime);
     }
-    
+
 }

@@ -46,7 +46,7 @@ public class bala : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToReload);
         Anmo = 5;
-        Debug.Log("reloading");
+        //Debug.Log("reloading");
     }
     private IEnumerator Smallreloading()
     {
