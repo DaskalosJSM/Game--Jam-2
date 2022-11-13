@@ -16,8 +16,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] float DeathLimits;
     [SerializeField] float ActivationInterval = 5;
     [SerializeField] float ActivationMemory;
-    [SerializeField] bool spawnersActive;
-    [SerializeField] bool TaskComplete;
+    public bool spawnersActive;
+    public bool TaskComplete;
     void Start()
     {
         ActivationMemory = ActivationInterval;
