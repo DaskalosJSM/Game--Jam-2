@@ -15857,7 +15857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480f06c0c17ecf429e51d334d2ccf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mouseSensitivity: 6
+  _mouseSensitivity: 4
   Posinicial: {x: -9, y: 5, z: -8}
   _target: {fileID: 989181681}
   _2target: {fileID: 1303238108}

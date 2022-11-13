@@ -21,8 +21,9 @@ public class bala : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButton("Fire2"))
         {
+            anim.SetBool("IsAiming", true);
             StartCoroutine(Reloading());
         }
         if (Input.GetButtonDown("Fire1") && Anmo > 0 && !Reload)
@@ -37,7 +38,7 @@ public class bala : MonoBehaviour
     }
     public void Shoot()
     {
-        anim.SetBool("Throw",true);
+        anim.SetTrigger("Shoot");
         Instantiate(Shell, FireStart.position, nCanon.rotation);
         Anmo--;
     }

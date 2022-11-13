@@ -51,9 +51,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse1)) playerIsAiming = false;
         anim.SetBool("Movement", false);
         anim.SetBool("Run", false);
+        anim.SetBool("IsAiming", false);
         anim.SetBool("Dublejump", false);
         anim.SetBool("Wallrun", false);
-        anim.SetBool("Throw", false);
 
 
         Movement();
