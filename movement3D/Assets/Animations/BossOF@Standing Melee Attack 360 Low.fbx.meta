@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: a55daa7126022434983131f8c3bbeabb
+guid: 488d7d1003eb04a41acc724c6ba6ab48
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Idle
+    second: mixamo.com
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -34,36 +34,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Idle
-      takeName: mixamo.com
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 300
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -125,11 +96,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-<<<<<<< Updated upstream:movement3D/Assets/Animations/model@Idle.fbx.meta
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 85f357e8f9c814c40afe72ce8495878c, type: 3}
-=======
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8091c803b396e89429fa62d949b8041c, type: 3}
->>>>>>> Stashed changes:movement3D/Assets/Animations/Boss/BossOF@Mutant Idle.fbx.meta
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

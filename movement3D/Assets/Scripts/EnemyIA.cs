@@ -4,12 +4,15 @@ using UnityEngine.AI;
 public class EnemyIA: MonoBehaviour
 {
     public NavMeshAgent agent;
-
     public Transform player1;
-
     public LayerMask whatIsGround, whatIsPlayer;
+<<<<<<< Updated upstream:movement3D/Assets/Scripts/EnemyIA.cs
 
+=======
+    public Animator anim;
+>>>>>>> Stashed changes:movement3D/Assets/Scripts/Enemies/EnemyIA.cs
     public float health;
+    public bool bossenemy;
 
     //Patroling
     public Vector3 walkPoint;
@@ -75,25 +78,42 @@ public class EnemyIA: MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player1.position);
+        if(bossenemy==true)
+        {
+            agent.SetDestination(player1.position);
+            anim.SetBool("IsChasing", true);
+        }
     }
 
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-
         transform.LookAt(player1);
-
-
         if (!alreadyAttacked)
         {
             ///Attack code here
             Invoke("Shoot", 0.3f);
             ///End of attack code
-
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+         if(bossenemy==true)
+        {
+        anim.SetBool("IsChasing", false); 
+        agent.SetDestination(transform.position);
+        transform.LookAt(player1);
+        if (!alreadyAttacked)
+        {
+            anim.SetTrigger("Attack");
+            ///Attack code here
+            Invoke("Shoot", 0.3f);
+            ///End of attack code
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+        }
+
     }
     private void ResetAttack()
     {
