@@ -139,8 +139,9 @@ public class PlayerController : MonoBehaviour
         if (playerIsAiming == true)
         {
             // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, _followCamera.transform.rotation, _rotationSpeed * Time.deltaTime);
-            Vector3 movementDirection = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
+            transform.rotation = _followCamera.transform.rotation;
+            Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
+            Vector3 movementDirection = movementInput.normalized;
             _controller.Move(movementDirection * _playerSpeed * Time.deltaTime);
 
             if (movementDirection != Vector3.zero)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject UIHint;
+    public GameObject surviveUI;
     public GameObject cover;
     public GameObject Vault;
     public GameObject Reward;
@@ -18,6 +19,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] float ActivationMemory;
     public bool spawnersActive;
     public bool TaskComplete;
+    public bool UI;
     void Start()
     {
         ActivationMemory = ActivationInterval;
@@ -30,8 +32,12 @@ public class SpawnManager : MonoBehaviour
             ActivateSpawner();
             ActivationInterval = ActivationMemory;
             UIHint.SetActive(false);
+            if (UI == true)
+            {
+                surviveUI.SetActive(true);
+            }
         }
-        if (Deathcount == DeathLimits)
+        if (Deathcount >= DeathLimits)
         {
             UIHint.SetActive(true);
             spawnersActive = false;
@@ -39,6 +45,10 @@ public class SpawnManager : MonoBehaviour
             Deathcount = 0;
             TaskComplete = true;
             levelPortal.SetActive(true);
+            if (UI == true)
+            {
+                surviveUI.SetActive(false);
+            }
         }
     }
     void DesactivateSpawner()
@@ -66,10 +76,10 @@ public class SpawnManager : MonoBehaviour
         {
             Destroy(Vault);
             UIHint.SetActive(false);
-            Instantiate(Reward,this.transform.position,this.transform.rotation);
+            Instantiate(Reward, this.transform.position, this.transform.rotation);
         }
     }
-      private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
 
         if (other.CompareTag("Player"))

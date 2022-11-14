@@ -9,7 +9,9 @@ public class CollectablesScript : MonoBehaviour
     
     [SerializeField] bool Anmo;
     
-    [SerializeField] bool Key;
+    [SerializeField] bool Keylvl2;
+    [SerializeField] bool Keylvl3;
+    [SerializeField] bool Keylvlboss;
     void Start()
     {
         Stats = GameObject.Find("GameStatsManager").GetComponent<PlayerStats>();
@@ -17,11 +19,20 @@ public class CollectablesScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("Player") && Key == true)
+        if (other.gameObject.CompareTag("Player") && Keylvl2 == true)
         {
             Destroy(gameObject);
-            Stats.weaponPiece += 1;
-            Key = false;
+            Stats.weaponPiece = 1;
+        }
+        if (other.gameObject.CompareTag("Player") && Keylvl3 == true)
+        {
+            Destroy(gameObject);
+            Stats.weaponPiece = 2;
+        }
+        if (other.gameObject.CompareTag("Player") && Keylvlboss == true)
+        {
+            Destroy(gameObject);
+            Stats.weaponPiece = 3;
         }
         if (other.gameObject.CompareTag("Player") && Life == true && Stats.Health<100)
         {
