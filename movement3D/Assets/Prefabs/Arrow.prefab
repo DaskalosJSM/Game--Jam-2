@@ -130,8 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 8
-  speed: 20
+  speed: 35
   rb: {fileID: 6900332115156298167}
   enemyLife: {fileID: 0}
   health: {fileID: 0}
-  soundArrow: {fileID: 0}
