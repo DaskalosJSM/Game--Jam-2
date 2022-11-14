@@ -5781,6 +5781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 549891718860000917, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1194873372523660185, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5829,10 +5833,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4263740441242818625, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5566158286242513758, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
       propertyPath: _followCamera
       value: 
       objectReference: {fileID: 281323232}
+    - target: {fileID: 8576260471363860893, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.311
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576260471363860893, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576260471363860893, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
 --- !u!1001 &2353533424678568409
