@@ -4679,7 +4679,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 59.8, y: 23.2}
+  m_SizeDelta: {x: 58, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745419964
 MonoBehaviour:
@@ -4770,8 +4770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sigth: {fileID: 1745419962}
-  offsetX: 0
-  offsetY: 0
+  offsetX: -30
+  offsetY: -20
 --- !u!1 &1775806503
 GameObject:
   m_ObjectHideFlags: 0
