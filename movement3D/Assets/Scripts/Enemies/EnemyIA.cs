@@ -3,14 +3,12 @@ using UnityEngine.AI;
 
 public class EnemyIA : MonoBehaviour
 {
+    public bool boosEnemy;
     public SpawnManager spawnManager;
     public NavMeshAgent agent;
-
     public Transform player1;
-
     public LayerMask whatIsGround, whatIsPlayer;
     public Animator anim;
-
     public float health;
 
     [Header("Patrolling")]
@@ -27,7 +25,6 @@ public class EnemyIA : MonoBehaviour
     [Header("States")]
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -38,7 +35,6 @@ public class EnemyIA : MonoBehaviour
     {
         spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>(); ;
     }
-
     private void Update()
     {
         //Check for sight and attack range
@@ -78,6 +74,11 @@ public class EnemyIA : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player1.position);
+        if (boosEnemy == true)
+        {
+            anim.SetBool("IsWalking", true);
+            agent.SetDestination(player1.position);
+        }
     }
 
     private void AttackPlayer()
@@ -97,6 +98,25 @@ public class EnemyIA : MonoBehaviour
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+        if (boosEnemy == true)
+        {
+            anim.SetBool("IsWalking", false);
+            agent.SetDestination(transform.position);
+
+            transform.LookAt(player1);
+
+
+            if (!alreadyAttacked)
+            {
+                anim.SetTrigger("Attack");
+                ///Attack code here
+                Invoke("Shoot", 0.3f);
+                ///End of attack code
+
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
         }
     }
     private void ResetAttack()
