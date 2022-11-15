@@ -14,9 +14,11 @@ public class MovementDoors : MonoBehaviour
     public bool Opening;
     public bool cantBeOpen;
     private Vector3 inicialPos;
+    public soundManager soundManager;
 
     private void Start()
     {
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();
         dungeon = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         inicialPos = this.transform.position;
         cover.SetActive(true);
@@ -45,7 +47,7 @@ public class MovementDoors : MonoBehaviour
         }
         if (Opening == true && dungeonDoor == false)
         {
-
+            
             transform.position = Vector3.MoveTowards(transform.position, waypoints[target].position, moveSpeed * Time.deltaTime);
         }
     }
@@ -72,7 +74,12 @@ public class MovementDoors : MonoBehaviour
         }
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && cantBeOpen == false)
         {
+            soundManager.Instance.Play(7);
             Opening = true;
+        }
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && cantBeOpen == true)
+        {
+            soundManager.Instance.Play(3);
         }
     }
     private void OnTriggerExit(Collider other)
