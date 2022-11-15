@@ -1512,7 +1512,7 @@ Transform:
   - {fileID: 1589804126}
   - {fileID: 1993552954}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168076763
 GameObject:
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!4 &232388684
 Transform:
   m_ObjectHideFlags: 0
@@ -3200,8 +3200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -78.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -83.1}
+  m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &333205791
 MonoBehaviour:
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3247,9 +3247,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1849643753}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PrincipalMenu
+        m_MethodName: Level1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4873,7 +4873,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!4 &498304243
 Transform:
   m_ObjectHideFlags: 0
@@ -6238,6 +6238,52 @@ Transform:
   m_Father: {fileID: 2004097755}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &626717401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626717403}
+  - component: {fileID: 626717402}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &626717402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626717401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d052bc26ce427342a7c8113dc0bd9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIElement: {fileID: 1720645164}
+  indice: 0
+--- !u!4 &626717403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626717401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &637932535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6923118370639466886, guid: a4febdd53e6e3484da535991a1aaafa7, type: 3}
@@ -7483,7 +7529,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!1 &769506763
 GameObject:
   m_ObjectHideFlags: 0
@@ -7613,7 +7659,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!1 &788670635
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,7 +8111,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870834955
 GameObject:
@@ -8428,7 +8474,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!1 &930662593
 GameObject:
   m_ObjectHideFlags: 0
@@ -12274,7 +12320,7 @@ RectTransform:
   m_Children:
   - {fileID: 100813270}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12329,7 +12375,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!1001 &1384474693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13250,7 +13296,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!4 &1510422582
 Transform:
   m_ObjectHideFlags: 0
@@ -13497,7 +13543,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -13519,7 +13565,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1849643754}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Reiniciar
         m_Mode: 1
@@ -13852,14 +13898,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570565333}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 374263846}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &1570565335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15424,7 +15470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1720645165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16197,7 +16243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adae40ff77152f64db9149f337a033cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPausa: {fileID: 0}
+  menuPausa: {fileID: 391307878}
 --- !u!4 &1849643755
 Transform:
   m_ObjectHideFlags: 0
@@ -16211,7 +16257,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1887209643
 PrefabInstance:
@@ -16226,7 +16272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2008284019701635363, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2008284019701635363, guid: 19589c7933bbc04439c85e1a2f990885, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16630,7 +16676,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 17.334, y: 2.317, z: 3.407}
 --- !u!1 &1925875693
 GameObject:
@@ -16832,7 +16878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIHint: {fileID: 374263845}
-  surviveUI: {fileID: 0}
+  surviveUI: {fileID: 1713522355}
   cover: {fileID: 669734870}
   Vault: {fileID: 137150378}
   Reward: {fileID: 5889662381004357123, guid: eb6485857678b4742bd26bb8e19b8f30, type: 3}
@@ -16869,7 +16915,7 @@ Transform:
   - {fileID: 137150379}
   - {fileID: 374263846}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1938995093
 BoxCollider:
@@ -17273,7 +17319,7 @@ RectTransform:
   - {fileID: 955669214}
   - {fileID: 391307879}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17506,7 +17552,7 @@ MonoBehaviour:
   EnemiesPrefabs:
   - {fileID: 2797218095762507137, guid: c3f2545f807bff844845f14feb0bdd12, type: 3}
   spawnInterval: 3
-  lifeTime: 1
+  lifeTime: 4
 --- !u!4 &1981611190
 Transform:
   m_ObjectHideFlags: 0
@@ -17808,7 +17854,7 @@ Transform:
   - {fileID: 785186928}
   - {fileID: 925174013}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2005181498
 PrefabInstance:
@@ -18625,7 +18671,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -18647,7 +18693,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1849643754}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Reanudar
         m_Mode: 1
