@@ -6479,6 +6479,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 211902519}
     - target: {fileID: 6421539449007153472, guid: cba78f4a883171e4c80216c8b642ca53, type: 3}
+      propertyPath: sightRange
+      value: 106.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421539449007153472, guid: cba78f4a883171e4c80216c8b642ca53, type: 3}
       propertyPath: spawnManager
       value: 
       objectReference: {fileID: 533580522}

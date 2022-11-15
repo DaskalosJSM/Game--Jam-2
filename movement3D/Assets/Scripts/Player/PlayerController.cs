@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     public float rotation;
     public Transform target;
-
+ 
+     [Header("Sounds")]
+     public soundManager soundManager;
+     public AudioSource Bowload;
 
     [Header("GameObjects")]
 
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();;
         wallrun = GetComponent<WallRunning>();
         anim = GetComponent<Animator>();
         _controller = GetComponent<CharacterController>();
@@ -138,6 +142,7 @@ public class PlayerController : MonoBehaviour
         }
         if (playerIsAiming == true)
         {
+           //soundManager.Play(Bowload);
             // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
             transform.rotation = _followCamera.transform.rotation;
             Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
