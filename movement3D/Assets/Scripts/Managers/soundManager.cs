@@ -11,7 +11,9 @@ public class soundManager : MonoBehaviour
 	public AudioSource monsterGroan;
 	public AudioSource BossGroan;
 	public AudioSource openDoor;
+	public AudioSource chestOpen;
 	public AudioSource MusicSource;
+	public AudioSource BossMusic;
 	// Random pitch adjustment range.
 	public float LowPitchRange = .95f;
 	public float HighPitchRange = 1.05f;
@@ -44,12 +46,18 @@ public class soundManager : MonoBehaviour
 		if (audio==5)monsterGroan.Play();
 		if (audio==6)BossGroan.Play();
 		if (audio==7)openDoor.Play();
+		if (audio==8)chestOpen.Play();
 	}
 	// Play a single clip through the music source.
 	public void PlayMusic(AudioClip clip)
 	{
 		MusicSource.clip = clip;
 		MusicSource.Play();
+	}
+	public void BossFigth()
+	{
+		MusicSource.Stop();
+		BossMusic.Play();
 	}
 	// Play a random clip from an array, and randomize the pitch slightly.
 	

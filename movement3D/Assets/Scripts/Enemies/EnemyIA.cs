@@ -25,6 +25,7 @@ public class EnemyIA : MonoBehaviour
     [Header("States")]
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    public soundManager soundManager;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -33,7 +34,8 @@ public class EnemyIA : MonoBehaviour
     }
     void Start()
     {
-        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>(); 
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
     private void Update()
     {
@@ -155,6 +157,8 @@ public class EnemyIA : MonoBehaviour
     }
     public void Shoot()
     {
+        if(boosEnemy)soundManager.Instance.Play(6);
+        if (boosEnemy == false)soundManager.Instance.Play(5);
         Instantiate(projectile, FireStart.position, FireStart.rotation);
     }
 }

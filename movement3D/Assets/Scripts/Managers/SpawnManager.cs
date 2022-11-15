@@ -20,8 +20,10 @@ public class SpawnManager : MonoBehaviour
     public bool spawnersActive;
     public bool TaskComplete;
     public bool UI;
+    public soundManager soundManager;
     void Start()
     {
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();
         ActivationMemory = ActivationInterval;
     }
     void Update()
@@ -70,10 +72,12 @@ public class SpawnManager : MonoBehaviour
 
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && TaskComplete == false)
         {
+            soundManager.Instance.Play(8);
             spawnersActive = true;
         }
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E) && TaskComplete == true)
         {
+            soundManager.Instance.Play(8);
             Destroy(Vault);
             UIHint.SetActive(false);
             Instantiate(Reward, this.transform.position, this.transform.rotation);
