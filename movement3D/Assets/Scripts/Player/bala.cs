@@ -11,16 +11,22 @@ public class bala : MonoBehaviour
     public Transform FireStart;
     private Transform nCanon;
     private bool Reload = false;
-     public Animator anim;
-    
+    public Animator anim;
+    public soundManager soundManager;
+
 
     void Start()
     {
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();
         nCanon = FireStart.parent;
         anim = GetComponent<Animator>();
     }
     void Update()
     {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            soundManager.Instance.Play(1);
+        }
         if (Input.GetButton("Fire2"))
         {
             anim.SetBool("IsAiming", true);
@@ -28,6 +34,7 @@ public class bala : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && Anmo > 0 && !Reload)
         {
+            soundManager.Instance.Play(2);
             Shoot();
             StartCoroutine(Smallreloading());
             if (Anmo == 0)

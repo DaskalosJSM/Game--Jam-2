@@ -4,7 +4,13 @@ using UnityEngine;
 public class soundManager : MonoBehaviour
 {
 	// Audio players components.
-	public AudioSource EffectsSource;
+	public AudioSource bowSound;
+	public AudioSource bowShoot;
+	public AudioSource closeDoor;
+	public AudioSource lifeUp;
+	public AudioSource monsterGroan;
+	public AudioSource BossGroan;
+	public AudioSource openDoor;
 	public AudioSource MusicSource;
 	// Random pitch adjustment range.
 	public float LowPitchRange = .95f;
@@ -29,10 +35,15 @@ public class soundManager : MonoBehaviour
 		DontDestroyOnLoad (gameObject);
 	}
 	// Play a single clip through the sound effects source.
-	public void Play(AudioClip clip)
+	public void Play(int audio)
 	{
-		EffectsSource.clip = clip;
-		EffectsSource.Play();
+		if (audio==1)bowSound.Play();
+		if (audio==2)bowShoot.Play();
+		if (audio==3)closeDoor.Play();
+		if (audio==4)lifeUp.Play();
+		if (audio==5)monsterGroan.Play();
+		if (audio==6)BossGroan.Play();
+		if (audio==7)openDoor.Play();
 	}
 	// Play a single clip through the music source.
 	public void PlayMusic(AudioClip clip)
@@ -41,13 +52,5 @@ public class soundManager : MonoBehaviour
 		MusicSource.Play();
 	}
 	// Play a random clip from an array, and randomize the pitch slightly.
-	public void RandomSoundEffect(params AudioClip[] clips)
-	{
-		int randomIndex = Random.Range(0, clips.Length);
-		float randomPitch = Random.Range(LowPitchRange, HighPitchRange);
-		EffectsSource.pitch = randomPitch;
-		EffectsSource.clip = clips[randomIndex];
-		EffectsSource.Play();
-	}
 	
 }
