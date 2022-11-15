@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemiesPrefabs:
-  - {fileID: 8397180594104155055, guid: b17cc189d3311594d8427a4c865afe4a, type: 3}
+  - {fileID: 9149535994752737480, guid: 6c76d263bf28fe249bdf9c10d0d46d5b, type: 3}
   spawnInterval: 1
   lifeTime: 1
 --- !u!4 &1045327765
@@ -4271,7 +4271,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0461bc287b77bb04196129388ed42a69, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f4251f3c3c2a7af45b268baa1297a79f, type: 2}
 --- !u!4 &1671185509
 Transform:
   m_ObjectHideFlags: 0

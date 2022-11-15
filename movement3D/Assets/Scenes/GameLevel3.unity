@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &15671306
 Transform:
   m_ObjectHideFlags: 0
@@ -8999,7 +8999,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5c22f868f8936df4a933cae9246ab944, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: b32d1a0ed7e6dac4ca0cdba85613a770, type: 2}
 --- !u!4 &971441600
 Transform:
   m_ObjectHideFlags: 0
@@ -14601,6 +14601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e6755355a598445bc786f2c4edc6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boosEnemy: 0
   spawnManager: {fileID: 0}
   agent: {fileID: 1639111324}
   player1: {fileID: 1471694645}
