@@ -33,7 +33,7 @@ public class EnemyIA : MonoBehaviour
     }
     void Start()
     {
-        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>(); ;
+        spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>(); 
     }
     private void Update()
     {

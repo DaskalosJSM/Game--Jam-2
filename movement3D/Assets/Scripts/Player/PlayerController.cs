@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
         }
         if (playerIsAiming == true)
         {
-           //soundManager.Play(Bowload);
+           //soundManager.EffectsSource(Bowload);
             // Quaternion desiredRotation = Quaternion.LookRotation(_followCamera.transform.position, Vector3.up);
             transform.rotation = _followCamera.transform.rotation;
             Vector3 movementInput = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
