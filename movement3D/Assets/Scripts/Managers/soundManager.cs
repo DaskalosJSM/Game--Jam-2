@@ -61,6 +61,10 @@ public class soundManager : MonoBehaviour
 		MusicSource.Stop();
 		BossMusic.Play();
 	}
+	public void backToStart()
+	{
+		BossMusic.Stop();
+	}
 	// Play a random clip from an array, and randomize the pitch slightly.
 	
 }

@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     // Función encargado de iniciar la scena menú principal
     public void PrincipalMenu()
     {
+         soundManager.Instance.backToStart();
         soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;

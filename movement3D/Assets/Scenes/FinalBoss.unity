@@ -1732,6 +1732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   TransitionTime: 0.5
+  soundManager: {fileID: 0}
   currentGameState: 6
 --- !u!114 &492482435
 MonoBehaviour:
@@ -1745,6 +1746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adae40ff77152f64db9149f337a033cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
   menuPausa: {fileID: 99315221}
 --- !u!4 &492482436
 Transform:
@@ -1900,6 +1902,7 @@ MonoBehaviour:
   spawnersActive: 0
   TaskComplete: 0
   UI: 1
+  soundManager: {fileID: 0}
 --- !u!4 &533580523
 Transform:
   m_ObjectHideFlags: 0
@@ -6543,6 +6546,10 @@ PrefabInstance:
       propertyPath: spawnManager
       value: 
       objectReference: {fileID: 533580522}
+    - target: {fileID: 6421539449007153473, guid: cba78f4a883171e4c80216c8b642ca53, type: 3}
+      propertyPath: m_Speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6421539449007153475, guid: cba78f4a883171e4c80216c8b642ca53, type: 3}
       propertyPath: m_Name
       value: Final Boss
