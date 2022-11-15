@@ -126,9 +126,14 @@ public class EnemyIA : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (boosEnemy)
+        {
+            anim.SetTrigger("DamageHit");
+            health -= damage;
+            if (health <= 0) anim.SetTrigger("Death");
+        }
         anim.SetTrigger("DamageHit");
         health -= damage;
-
         if (health <= 0)
         {
             anim.SetTrigger("Death");

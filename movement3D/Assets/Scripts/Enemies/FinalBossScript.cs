@@ -16,7 +16,7 @@ public class FinalBossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Enemy.health <= 0)
+        if (Enemy.health == 0)
         {
             Manager.YouWin();
         }

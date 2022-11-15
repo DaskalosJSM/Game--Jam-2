@@ -28,7 +28,7 @@ public class EnmyHealtbarUI : MonoBehaviour
     {
         CurrentHealth = Enemy.health;
         HealthBar.fillAmount = CurrentHealth / MaxHealt;
-        if (Enemy.health>=0)
+        if (Enemy.health<=0)
         {
             Invoke("EnemyisDeath", 3.0f);
         }

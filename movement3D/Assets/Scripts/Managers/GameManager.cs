@@ -13,7 +13,7 @@ public enum GameState
     Level1,
     Level2,
     Level3,
-    FianlBoss,
+    FinalBoss,
     gameOver,
     Credits,
     Controls,
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     {
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
-        SetGameState(GameState.FianlBoss);
+        SetGameState(GameState.FinalBoss);
     }
     public void Credits()
     {
@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
             //TODO: colocar la logica del level 3
             SceneManager.LoadScene("GameLevel3");
         }
-        else if (newGameState == GameState.FianlBoss)
+        else if (newGameState == GameState.FinalBoss)
         {
             //TODO: colocar la logica del level 4
             SceneManager.LoadScene("FinalBoss");
