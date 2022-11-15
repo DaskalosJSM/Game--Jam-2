@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &15671306
 Transform:
   m_ObjectHideFlags: 0
@@ -8049,9 +8049,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
-  arrow1: {fileID: 0}
-  arrow2: {fileID: 0}
-  arrow3: {fileID: 0}
   Anmo: 0
   weaponPiece: 0
   Manager: {fileID: 0}

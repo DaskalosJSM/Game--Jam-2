@@ -16280,7 +16280,7 @@ MonoBehaviour:
   levelPortal: {fileID: 1791403836}
   Deathcount: 0
   Index: 0
-  DeathLimits: 7
+  DeathLimits: 6
   ActivationInterval: 4
   ActivationMemory: 0
   spawnersActive: 0
