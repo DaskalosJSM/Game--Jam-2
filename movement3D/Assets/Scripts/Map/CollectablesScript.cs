@@ -40,6 +40,7 @@ public class CollectablesScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && Keylvlboss == true)
         {
             soundManager.Instance.Play(4);
+            soundManager.Instance.BossFigth();
             UIManager.indice = 1;
             Destroy(gameObject);
             Stats.weaponPiece = 3;

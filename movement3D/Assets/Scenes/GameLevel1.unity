@@ -11811,6 +11811,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294190554}
   m_CullTransparentMesh: 1
+--- !u!114 &1306320235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8235309499114548111, guid: f08b6c075ab9de949bdaa125cb13bad6, type: 3}
+  m_PrefabInstance: {fileID: 1765964740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1426298ca10c2b24c978ae09b1b6a5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1309602111
 GameObject:
   m_ObjectHideFlags: 0
@@ -14272,6 +14283,7 @@ MonoBehaviour:
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+  soundManager: {fileID: 0}
 --- !u!65 &1639111327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15650,6 +15662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   TransitionTime: 0.5
+  soundManager: {fileID: 0}
   currentGameState: 3
 --- !u!114 &1849643754
 MonoBehaviour:
@@ -15663,6 +15676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adae40ff77152f64db9149f337a033cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
   menuPausa: {fileID: 1661059333}
 --- !u!4 &1849643755
 Transform:
@@ -16552,6 +16566,7 @@ MonoBehaviour:
   spawnersActive: 0
   TaskComplete: 0
   UI: 1
+  soundManager: {fileID: 1306320235}
 --- !u!4 &1938995092
 Transform:
   m_ObjectHideFlags: 0

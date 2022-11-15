@@ -13,6 +13,7 @@ public class soundManager : MonoBehaviour
 	public AudioSource openDoor;
 	public AudioSource chestOpen;
 	public AudioSource MusicSource;
+	public AudioSource buttonConf;
 	public AudioSource BossMusic;
 	// Random pitch adjustment range.
 	public float LowPitchRange = .95f;
@@ -47,6 +48,7 @@ public class soundManager : MonoBehaviour
 		if (audio==6)BossGroan.Play();
 		if (audio==7)openDoor.Play();
 		if (audio==8)chestOpen.Play();
+		if (audio==9)buttonConf.Play();
 	}
 	// Play a single clip through the music source.
 	public void PlayMusic(AudioClip clip)

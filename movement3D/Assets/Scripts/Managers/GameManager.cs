@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public static GameManager sharedInstance;
     public Animator anim;
     public float TransitionTime;
+    public soundManager soundManager;
 
     // Declaración del estado del juego
     public GameState currentGameState = GameState.principalMenu;
@@ -39,9 +40,13 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
     }
+    private void Start() {
+        soundManager = GameObject.Find("SoundManager").GetComponent<soundManager>();
+    }
     // Función encargado de iniciar la scena menú principal
     public void PrincipalMenu()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.principalMenu);
@@ -56,6 +61,7 @@ public class GameManager : MonoBehaviour
     // Función encargado de iniciar la scena level1
     public void Tutorial()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Tutorial);
@@ -63,6 +69,7 @@ public class GameManager : MonoBehaviour
     // Función encargado de iniciar la scena level2
     public void Level1()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Level1);
@@ -77,6 +84,7 @@ public class GameManager : MonoBehaviour
     // Función encargado de iniciar la scena level4
     public void Level3()
     {
+        
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Level3);
@@ -90,12 +98,14 @@ public class GameManager : MonoBehaviour
     }
     public void Credits()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Credits);
     }
     public void Controls()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Time.timeScale = 1f;
         SetGameState(GameState.Controls);
@@ -115,6 +125,7 @@ public class GameManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        soundManager.Instance.Play(9);
         Invoke("LoadTrigger", TransitionTime);
         Application.Quit();
     }
