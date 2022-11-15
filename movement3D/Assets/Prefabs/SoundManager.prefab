@@ -61,7 +61,7 @@ MonoBehaviour:
   monsterGroan: {fileID: 8235309499114548098}
   BossGroan: {fileID: 8235309499114548109}
   openDoor: {fileID: 8235309499114548102}
-  chestOpen: {fileID: 0}
+  chestOpen: {fileID: 1757075439480212618}
   MusicSource: {fileID: 8235309499114548110}
   BossMusic: {fileID: 3676580724353478701}
   LowPitchRange: 0.95
