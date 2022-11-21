@@ -116,22 +116,12 @@ public class PlayerController : MonoBehaviour
                 {
                     anim.SetBool("Wallrun", true);
                     //anim.SetBool("Dublejump", false);
-                    if (wallrun.wallLeft)
-                    {
                         Jumpcount = 0;
                         wallrunningCap--;
+                        if (wallrun.wallRight && rotation < 0) rotation = -rotation;
                         desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
                         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
-                    }
-                    if (wallrun.wallRight)
-                    {
-                        Jumpcount = 0;
-                        Debug.Log(rotation);
-                        if (rotation < 0) rotation = -rotation;
-                        wallrunningCap--;
-                        desiredRotation = Quaternion.Euler(0, _followCamera.transform.eulerAngles.y, rotation);
-                        transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, wallrunrotationSpeed * Time.deltaTime);
-                    }
+                    
                 }
             }
         }
